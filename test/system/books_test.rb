@@ -15,6 +15,9 @@ class BooksTest < ApplicationSystemTestCase
     click_on "New book"
 
     fill_in "Title", with: @book.title
+    fill_in "Author", with: @book.author
+    fill_in "Price", with: @book.price
+    fill_in "Published Date", with: @book.published_date
     click_on "Create Book"
 
     assert_text "Book was successfully created"
